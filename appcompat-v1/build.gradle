@@ -6,7 +6,7 @@ ext {
     bintrayOrg = 'pi'
 
     publishedGroupId = 'com.pointinside.android.support'
-    libraryName = 'android'
+    libraryName = 'maven'
     artifact = 'appcompat-v1'
 
     libraryDescription = 'This library includes all the dependencies for the PI Android SDK.'
@@ -14,7 +14,7 @@ ext {
     siteUrl = 'https://github.com/PointInside/pi-android-support'
     gitUrl = 'https://github.com/PointInside/pi-android-support.git'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.0.2'
 
     developerId = 'pointinside'
     developerName = 'Point Inside'
