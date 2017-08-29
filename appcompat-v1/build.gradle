@@ -1,19 +1,20 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 ext {
-    bintrayRepo = 'android'
-    bintrayName = 'android-util'
+    bintrayRepo = 'maven'
+    bintrayName = 'appcompat-v1'
+    bintrayOrg = 'pi'
 
-    publishedGroupId = 'com.pointinside.android'
+    publishedGroupId = 'com.pointinside.android.support'
     libraryName = 'android'
-    artifact = 'android-util'
+    artifact = 'appcompat-v1'
 
-    libraryDescription = 'This library includes all the dependencies for pimapslib.'
+    libraryDescription = 'This library includes all the dependencies for the PI Android SDK.'
 
-    siteUrl = 'https://github.com/PointInside/pi-android-util'
-    gitUrl = 'https://github.com/PointInside/pi-android-util.git'
+    siteUrl = 'https://github.com/PointInside/pi-android-support'
+    gitUrl = 'https://github.com/PointInside/pi-android-support.git'
 
-    libraryVersion = '0.1.0'
+    libraryVersion = '1.0.0'
 
     developerId = 'pointinside'
     developerName = 'Point Inside'
@@ -26,7 +27,7 @@ ext {
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    buildToolsVersion "25.0.3"
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 25
@@ -42,7 +43,7 @@ android {
     }
 }
 
-def supportLibVersion = '25.3.1'
+def supportLibVersion = '25.4.0'
 def retrofitVersion = '2.3.0'
 def gsonVersion = '2.8.0'
 def playServicesVersion = '11.0.4'
@@ -62,5 +63,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
-apply from: 'https://raw.githubusercontent.com/PointInside/pi-android-util/master/install.gradle'
-apply from: 'https://raw.githubusercontent.com/PointInside/pi-android-util/master/bintray.gradle'
+apply from: 'https://raw.githubusercontent.com/PointInside/pi-android-support/master/install.gradle'
+apply from: 'https://raw.githubusercontent.com/PointInside/pi-android-support/master/bintray.gradle'
