@@ -31,7 +31,8 @@ artifacts {
 
 // Bintray
 Properties properties = new Properties()
-properties.load(project.rootProject.getUserHomeDir().file('bintray.properties').newDataInputStream())
+def bintrayPropertiesFile = rootProject.file(project.rootProject.getUserHomeDir() + "/bintray.properties")
+properties.load(bintrayPropertiesFile.newDataInputStream())
 
 bintray {
     user = properties.getProperty("bintray.user")
