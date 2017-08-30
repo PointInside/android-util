@@ -22,3 +22,7 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+def getUserHomeDir() {
+    return System.getProperty("user.home").toString()
+}
