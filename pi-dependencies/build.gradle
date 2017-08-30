@@ -14,7 +14,7 @@ ext {
     siteUrl = 'https://github.com/PointInside/pi-android-support'
     gitUrl = 'https://github.com/PointInside/pi-android-support.git'
 
-    libraryVersion = '1.0.5'
+    libraryVersion = '1.0.6'
 
     developerId = 'pointinside'
     developerName = 'Point Inside'
