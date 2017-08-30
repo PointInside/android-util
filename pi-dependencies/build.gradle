@@ -2,19 +2,19 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 ext {
     bintrayRepo = 'maven'
-    bintrayName = 'appcompat-v1'
+    bintrayName = 'pi-dependencies'
     bintrayOrg = 'pi'
 
     publishedGroupId = 'com.pointinside.android.support'
-    libraryName = 'maven'
-    artifact = 'appcompat-v1'
+    libraryName = 'PI Android SDK support library'
+    artifact = 'pi-dependencies'
 
     libraryDescription = 'This library includes all the dependencies for the PI Android SDK.'
 
     siteUrl = 'https://github.com/PointInside/pi-android-support'
     gitUrl = 'https://github.com/PointInside/pi-android-support.git'
 
-    libraryVersion = '1.0.2'
+    libraryVersion = '1.0.5'
 
     developerId = 'pointinside'
     developerName = 'Point Inside'
