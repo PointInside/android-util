@@ -14,7 +14,7 @@ ext {
     siteUrl = 'https://github.com/PointInside/pi-android-support'
     gitUrl = 'https://github.com/PointInside/pi-android-support.git'
 
-    libraryVersion = '1.0.6'
+    libraryVersion = deps.pi.version
 
     developerId = 'pointinside'
     developerName = 'Point Inside'
@@ -26,11 +26,11 @@ ext {
 }
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    compileSdkVersion build_versions.target_sdk
+    buildToolsVersion build_versions.build_tools
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 25
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -41,26 +41,27 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
-def supportLibVersion = '25.4.0'
-def retrofitVersion = '2.3.0'
-def gsonVersion = '2.8.0'
-def playServicesVersion = '11.0.4'
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile "com.android.support:appcompat-v7:${supportLibVersion}"
-    compile "com.google.android.gms:play-services-ads:${playServicesVersion}"
-    compile "com.google.code.gson:gson:${gsonVersion}"
-    compile "com.squareup.retrofit2:retrofit:${retrofitVersion}"
-    compile "com.squareup.retrofit2:converter-gson:${retrofitVersion}"
-    compile 'com.squareup.okhttp3:logging-interceptor:3.8.0'
-    compile "com.android.support:support-v4:${supportLibVersion}"
-    compile "com.android.support:support-annotations:${supportLibVersion}"
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation deps.gson
+    implementation deps.support.app_compat
+    implementation deps.support.v4
+    implementation deps.retrofit.runtime
+    implementation deps.retrofit.gson
+    implementation deps.play.ads
+    implementation deps.logging_intercepter
+    implementation deps.support.annotations
+    androidTestImplementation(deps.espresso.core, {
         exclude group: 'com.android.support', module: 'support-annotations'
+        exclude group: 'com.google.code.findbugs', module: 'jsr305'
     })
-    testCompile 'junit:junit:4.12'
+    testImplementation deps.junit
 }
 
 apply from: 'https://raw.githubusercontent.com/PointInside/pi-android-support/master/install.gradle'

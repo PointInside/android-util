@@ -1,22 +1,19 @@
 buildscript {
-    repositories {
-        jcenter()
-        mavenCentral()
-    }
+    apply from: '../../versions.gradle'
+    addRepos(repositories)
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.4'
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+        classpath deps.android_gradle_plugin
+        classpath deps.gradle_bintray_plugin
+        classpath deps.android_maven_gradle_plugin
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
 }
 
+
+
 allprojects {
-    repositories {
-        jcenter()
-        maven { url "https://maven.google.com" }
-    }
+    addRepos(repositories)
 }
 
 task clean(type: Delete) {
