@@ -48,20 +48,20 @@ android {
 }
 
 dependencies {
-    api fileTree(include: ['*.jar'], dir: 'libs')
-    api deps.gson
-    api deps.support.app_compat
-    api deps.support.v4
-    api deps.retrofit.runtime
-    api deps.retrofit.gson
-    api deps.play.ads
-    api deps.logging_intercepter
-    api deps.support.annotations
-    androidTestImplementation(deps.espresso.core, {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile deps.gson
+    compile deps.support.app_compat
+    compile deps.support.v4
+    compile deps.retrofit.runtime
+    compile deps.retrofit.gson
+    compile deps.play.ads
+    compile deps.logging_intercepter
+    compile deps.support.annotations
+    androidTestCompile(deps.espresso.core, {
         exclude group: 'com.android.support', module: 'support-annotations'
         exclude group: 'com.google.code.findbugs', module: 'jsr305'
     })
-    testImplementation deps.junit
+    testCompile deps.junit
 }
 
 apply from: 'https://raw.githubusercontent.com/PointInside/pi-android-support/master/install.gradle'

@@ -3,7 +3,7 @@ PI Android SDK support library
 
 # Version
 
-1.0.6
+1.0.10
 
 # Installation
 
@@ -16,7 +16,7 @@ repositories {
     maven { url "https://dl.bintray.com/pi/maven" }
 }
 dependencies {
-    compile 'com.pointinside.android.support:pi-dependencies:1.0.6'
+    compile 'com.pointinside.android.support:pi-dependencies:1.0.10'
 }
 ```
 
