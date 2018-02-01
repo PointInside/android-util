@@ -57,6 +57,13 @@ dependencies {
     compile deps.play.ads
     compile deps.logging_intercepter
     compile deps.support.annotations
+    compile deps.room.runtime
+    compile deps.lifecycle.java8
+    compile deps.lifecycle.runtime
+    compile (deps.lifecycle.extensions, {
+        exclude group: 'android.arch.lifecycle', module: 'runtime'
+    })
+    compile deps.jobdispatcher
     androidTestCompile(deps.espresso.core, {
         exclude group: 'com.android.support', module: 'support-annotations'
         exclude group: 'com.google.code.findbugs', module: 'jsr305'
