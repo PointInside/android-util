@@ -55,6 +55,8 @@ dependencies {
     compile deps.retrofit.runtime
     compile deps.retrofit.gson
     compile deps.play.ads
+    compile deps.play.location
+    compile deps.instantapps
     compile deps.logging_intercepter
     compile deps.support.annotations
     compile deps.room.runtime
